@@ -1,415 +1,363 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>George P Mathew - Civil Engineer | Materials Engineering Candidate</title>
-    <meta name="description" content="Experienced Civil Engineer with proven construction management skills and business growth expertise. Available for Werkstudent positions in Germany.">
-    <meta name="keywords" content="Civil Engineer, Materials Engineering, RWTH Aachen, Construction Management, Germany, Werkstudent">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>George P Mathew – Civil Engineer | Materials Engineering Candidate</title>
+  <meta name="description" content="Portfolio of George P Mathew – Civil Engineer with on‑site experience and business transformation impact. Materials Engineering (RWTH Aachen). Seeking Werkstudent/Junior roles in Germany." />
+  <meta name="color-scheme" content="light only">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <style>
+    :root{
+      --bg: #ffffff; --text: #0f172a; --muted:#475569; --brand:#003366; --accent:#0ea5e9; --line:#e2e8f0;
+      --card:#f8fafc; --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text)}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px, 92%); margin-inline:auto}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.9); border-bottom:1px solid var(--line); z-index:50}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
+    .nav a.logo{display:flex; align-items:center; gap:.65rem; font-weight:700; color:var(--text)}
+    .nav .links{display:flex; gap:1rem; align-items:center}
+    .nav .links a{padding:.5rem .75rem; border-radius:10px}
+    .nav .links a:hover{background:var(--card)}
+    .lang-toggle{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden}
+    .lang-toggle button{padding:.35rem .65rem; border:0; background:none; font-weight:600; color:var(--muted); cursor:pointer}
+    .lang-toggle button.active{background:var(--text); color:#fff}
+
+    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center; padding:3rem 0}
+    .hero h1{font-size:clamp(1.8rem, 3vw, 3rem); line-height:1.1; margin:0}
+    .hero p.lead{font-size:clamp(1rem, 1.3vw, 1.2rem); color:var(--muted)}
+    .hero .cta{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem}
+    .btn{display:inline-flex; align-items:center; gap:.5rem; border:1px solid var(--text); color:#fff; background:var(--text); padding:.7rem 1rem; border-radius:12px; font-weight:600}
+    .btn.secondary{background:#fff; color:var(--text)}
+    .btn:hover{box-shadow:var(--shadow)}
+    .headshot{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:24px; box-shadow:var(--shadow); background:#e5e7eb}
+
+    .section{padding:2.5rem 0; border-top:1px solid var(--line)}
+    .section h2{font-size:1.6rem; margin:0 0 1rem}
+    .chips{display:flex; gap:.6rem; flex-wrap:wrap}
+    .chip{padding:.5rem .7rem; border:1px solid var(--line); border-radius:999px; background:#fff; font-weight:600}
+
+    .cards{display:grid; grid-template-columns:repeat(12, 1fr); gap:1rem}
+    .card{grid-column: span 12; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:1rem; box-shadow:var(--shadow)}
+    .card h3{margin:.3rem 0 .5rem}
+
+    /* Featured project larger */
+    .card.featured{grid-column: span 12}
+
+    /* Resume grid */
+    .resume-grid{display:grid; grid-template-columns: 1fr 1fr; gap:1rem}
+    .timeline{border-left:3px solid var(--line); padding-left:1rem}
+    .timeline-item{margin-bottom:1rem}
+    .timeline-item h4{margin:.1rem 0}
+    .meta{color:var(--muted); font-size:.95rem}
+
+    /* Contact */
+    .contact{display:grid; grid-template-columns: 1fr; gap:1rem}
+    .social{display:flex; gap:.7rem; align-items:center; flex-wrap:wrap}
+    .pill{display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .8rem; border:1px solid var(--line); border-radius:999px; background:#fff}
+
+    /* Sticky mobile nav */
+    .mobile-nav{position:sticky; bottom:0; border-top:1px solid var(--line); background:#fff; display:none}
+    .mobile-nav .bar{display:flex; justify-content:space-around; padding:.5rem}
+    .mobile-nav a{display:flex; flex-direction:column; align-items:center; font-size:.8rem; color:var(--muted); padding:.35rem .2rem}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr; padding:2rem 0}
+    }
+    @media (max-width: 720px){
+      .resume-grid{grid-template-columns:1fr}
+      .mobile-nav{display:block}
+      header{position:sticky}
+    }
+  </style>
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
-        <button id="lang-de" class="lang-btn" data-lang="de">DE</button>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <a class="logo" href="#home" aria-label="Home">
+        <!-- Simple monogram SVG -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect width="24" height="24" rx="6" fill="var(--text)"/><path d="M6 17V7h3.5c2.5 0 4 1.6 4 3.6 0 1.4-.8 2.7-2.1 3.2L16 17h-2.6l-3-3H8.6V17H6Zm2.6-8.2v3h1.7c1 0 1.6-.6 1.6-1.5s-.6-1.5-1.6-1.5H8.6Z" fill="#fff"/></svg>
+        <span>George&nbsp;P&nbsp;Mathew</span>
+      </a>
+      <nav class="links">
+        <a href="#value" data-i18n="nav.value">Value</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#resume" data-i18n="nav.resume">Résumé</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <div class="lang-toggle" role="group" aria-label="Language toggle">
+          <button id="lang-en" class="active" data-lang="en" aria-pressed="true">EN</button>
+          <button id="lang-de" data-lang="de" aria-pressed="false">DE</button>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
-        <a href="#hero" class="nav-link" data-en="Home" data-de="Startseite">Home</a>
-        <a href="#about" class="nav-link" data-en="About" data-de="Über mich">About</a>
-        <a href="#projects" class="nav-link" data-en="Projects" data-de="Projekte">Projects</a>
-        <a href="#experience" class="nav-link" data-en="Experience" data-de="Erfahrung">Experience</a>
-        <a href="#contact" class="nav-link" data-en="Contact" data-de="Kontakt">Contact</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span data-en="George P Mathew" data-de="George P Mathew">George P Mathew</span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        <span data-en="Civil Engineer | Materials Engineering Candidate" data-de="Bauingenieur | Werkstofftechnik-Kandidat">Civil Engineer | Materials Engineering Candidate</span>
-                    </h2>
-                    <p class="hero-description">
-                        <span data-en="Experienced construction manager with proven business growth expertise. Ready to contribute to German engineering excellence while pursuing advanced studies at RWTH Aachen University." data-de="Erfahrener Bauleiter mit nachgewiesener Geschäftswachstums-Expertise. Bereit, zur deutschen Ingenieursexzellenz beizutragen, während ich ein weiterführendes Studium an der RWTH Aachen absolviere.">Experienced construction manager with proven business growth expertise. Ready to contribute to German engineering excellence while pursuing advanced studies at RWTH Aachen University.</span>
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label" data-en="Years Experience" data-de="Jahre Erfahrung">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label" data-en="Revenue Growth" data-de="Umsatzwachstum">Revenue Growth</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label" data-en="Major Projects" data-de="Großprojekte">Major Projects</span>
-                        </div>
-                    </div>
-                    <div class="hero-cta">
-                        <a href="#contact" class="btn-primary">
-                            <span data-en="Available for Werkstudent Positions" data-de="Verfügbar für Werkstudentenstellen">Available for Werkstudent Positions</span>
-                        </a>
-                        <a href="#projects" class="btn-secondary">
-                            <span data-en="View My Work" data-de="Meine Arbeit ansehen">View My Work</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="140" cy="140" r="140" fill="#f8fafc"/>
-                            <circle cx="140" cy="140" r="139" stroke="#e2e8f0" stroke-width="2"/>
-                            <path d="M140 70c-38.66 0-70 31.34-70 70s31.34 70 70 70 70-31.34 70-70-31.34-70-70-70zm0 20c13.25 0 24 10.75 24 24s-10.75 24-24 24-24-10.75-24-24 10.75-24 24-24zm0 104c-20 0-37.5-10.25-48-25.75 1-16 32-24.75 48-24.75s47 8.75 48 24.75c-10.5 15.5-28 25.75-48 25.75z" fill="#64748b"/>
-                        </svg>
-                        <p class="image-note" data-en="Replace with your professional photo" data-de="Ersetzen Sie durch Ihr professionelles Foto">Replace with your professional photo</p>
-                    </div>
-                </div>
-            </div>
+  <main id="home" class="container">
+    <section class="hero" aria-labelledby="intro-title">
+      <div>
+        <h1 id="intro-title" data-i18n="hero.title">
+          Civil Engineer & Materials Engineering Candidate (RWTH Aachen)
+        </h1>
+        <p class="lead" data-i18n="hero.lead">
+          On‑site construction experience + business transformation: designed and launched a paint service model that doubled revenue in one year. Seeking Werkstudent/Junior roles in Germany.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects" data-i18n="hero.cta">See proof</a>
+          <a class="btn secondary" href="#contact" data-i18n="hero.cta2">Hire me</a>
         </div>
+        <div class="chips" style="margin-top:1rem">
+          <span class="chip" data-i18n="hero.badge1">Engineering credibility first</span>
+          <span class="chip" data-i18n="hero.badge2">Available now in Germany</span>
+          <span class="chip" data-i18n="hero.badge3">Open to part‑time & full‑time</span>
+        </div>
+      </div>
+      <div>
+        <!-- Replace headshot.jpg with your real photo (any size). It will auto‑crop. -->
+        <img class="headshot" src="headshot.jpg" alt="Portrait of George P Mathew" />
+      </div>
     </section>
 
-    <!-- Value Proposition Section -->
-    <section id="about" class="value-proposition">
-        <div class="container">
-            <h2 class="section-title">
-                <span data-en="Core Competencies" data-de="Kernkompetenzen">Core Competencies</span>
-            </h2>
-            <div class="competencies-grid">
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 42V16l18-12 18 12v26H28V28h-8v14H6z" fill="#3b82f6"/>
-                            <path d="M20 16h8v4h-8v-4zM20 24h8v4h-8v-4z" fill="white"/>
-                        </svg>
-                    </div>
-                    <h3 data-en="Construction Management" data-de="Baumanagement">Construction Management</h3>
-                    <p data-en="2+ years supervising pile foundations, precast installations, and quality control across multiple construction sites in India." data-de="2+ Jahre Überwachung von Pfahlgründungen, Fertigteilinstallationen und Qualitätskontrolle auf mehreren Baustellen in Indien.">2+ years supervising pile foundations, precast installations, and quality control across multiple construction sites in India.</p>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 8h40v32H4V8z" fill="#3b82f6"/>
-                            <path d="M8 12h32v6H8v-6zM8 22h20v4H8v-4zM8 30h16v4H8v-4zM32 22h8v12h-8V22z" fill="white"/>
-                        </svg>
-                    </div>
-                    <h3 data-en="Business Development" data-de="Geschäftsentwicklung">Business Development</h3>
-                    <p data-en="Transformed family business by implementing new service model, resulting in 100% revenue growth within 12 months through strategic market analysis." data-de="Transformation des Familienunternehmens durch Implementierung eines neuen Servicemodells, was zu 100% Umsatzwachstum innerhalb von 12 Monaten durch strategische Marktanalyse führte.">Transformed family business by implementing new service model, resulting in 100% revenue growth within 12 months through strategic market analysis.</p>
-                </div>
-                <div class="competency-card">
-                    <div class="competency-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 8h32v6H8V8zM8 18h32v22H8V18z" fill="#3b82f6"/>
-                            <path d="M12 22h8v4h-8v-4zM24 22h8v4h-8v-4zM12 30h20v4H12v-4z" fill="white"/>
-                        </svg>
-                    </div>
-                    <h3 data-en="Advanced Engineering" data-de="Fortgeschrittene Technik">Advanced Engineering</h3>
-                    <p data-en="Pursuing Materials Engineering Master's at RWTH Aachen University. Proficient in AutoCAD, SketchUp, and Microsoft Office suite." data-de="Verfolge Master in Werkstofftechnik an der RWTH Aachen. Erfahren in AutoCAD, SketchUp und Microsoft Office-Suite.">Pursuing Materials Engineering Master's at RWTH Aachen University. Proficient in AutoCAD, SketchUp, and Microsoft Office suite.</p>
-                </div>
-            </div>
-        </div>
+    <section id="value" class="section" aria-labelledby="value-title">
+      <h2 id="value-title" data-i18n="value.title">Value proposition</h2>
+      <div class="cards">
+        <article class="card" style="grid-column: span 4">
+          <h3 data-i18n="value.v1.title">On‑Site Engineering</h3>
+          <p class="meta" data-i18n="value.v1.copy">Supervised pile foundations, precast erection, finishing works; ensured quality and on‑time milestones.</p>
+        </article>
+        <article class="card" style="grid-column: span 4">
+          <h3 data-i18n="value.v2.title">Commercial Acumen</h3>
+          <p class="meta" data-i18n="value.v2.copy">Launched a paint service at Best Trading; market analysis → service design → local marketing → 100% sales growth in 12 months.</p>
+        </article>
+        <article class="card" style="grid-column: span 4">
+          <h3 data-i18n="value.v3.title">Advanced Academics</h3>
+          <p class="meta" data-i18n="value.v3.copy">Materials Engineering Studies (RWTH Aachen). Strong software stack: AutoCAD, SketchUp, MS Office; Adobe suite.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span data-en="Featured Projects" data-de="Ausgewählte Projekte">Featured Projects</span>
-            </h2>
-            <div class="projects-grid">
-                <!-- Business Transformation Project -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <h3 data-en="Business Transformation Initiative" data-de="Geschäftstransformations-Initiative">Business Transformation Initiative</h3>
-                        <span class="project-tag" data-en="Business Development" data-de="Geschäftsentwicklung">Business Development</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-challenge">
-                            <h4 data-en="Challenge" data-de="Herausforderung">Challenge</h4>
-                            <p data-en="Family paint supply business (Best Trading) experienced stagnant growth with traditional retail-only approach, limiting market expansion opportunities." data-de="Familiäres Farblieferunternehmen (Best Trading) erlebte stagnierendes Wachstum mit traditionellem Einzelhandelsansatz, was Marktexpansionsmöglichkeiten begrenzte.">Family paint supply business (Best Trading) experienced stagnant growth with traditional retail-only approach, limiting market expansion opportunities.</p>
-                        </div>
-                        <div class="project-solution">
-                            <h4 data-en="Solution" data-de="Lösung">Solution</h4>
-                            <p data-en="Conducted comprehensive market analysis and developed new 'paint service' model, including service offering design, implementation strategy, and local marketing campaign." data-de="Führte umfassende Marktanalyse durch und entwickelte neues 'Farbservice'-Modell, einschließlich Serviceangebot-Design, Implementierungsstrategie und lokaler Marketingkampagne.">Conducted comprehensive market analysis and developed new "paint service" model, including service offering design, implementation strategy, and local marketing campaign.</p>
-                        </div>
-                        <div class="project-results">
-                            <h4 data-en="Results" data-de="Ergebnisse">Results</h4>
-                            <div class="results-stats">
-                                <div class="result-stat">
-                                    <span class="result-number">100%</span>
-                                    <span class="result-label" data-en="Revenue Growth" data-de="Umsatzwachstum">Revenue Growth</span>
-                                </div>
-                                <div class="result-stat">
-                                    <span class="result-number">12</span>
-                                    <span class="result-label" data-en="Months to Target" data-de="Monate bis Ziel">Months to Target</span>
-                                </div>
-                                <div class="result-stat">
-                                    <span class="result-number">New</span>
-                                    <span class="result-label" data-en="Service Model" data-de="Service-Modell">Service Model</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title" data-i18n="projects.title">Project showcase</h2>
+      <div class="cards">
+        <article class="card featured">
+          <h3 data-i18n="projects.p1.title">Business Transformation – Best Trading (Paint Service)</h3>
+          <p class="meta" data-i18n="projects.p1.meta">Pathanapuram • 2023–2024</p>
+          <ul>
+            <li data-i18n="projects.p1.li1">Challenge: sales plateau with passive retail model.</li>
+            <li data-i18n="projects.p1.li2">Action: created a bundled paint service (consultation + supply + application), priced & promoted locally.</li>
+            <li data-i18n="projects.p1.li3">Result: doubled total revenue within 1 year; improved customer retention and referrals.</li>
+          </ul>
+        </article>
 
-                <!-- Construction Projects -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-en="Pile Foundation Supervision" data-de="Pfahlgründungs-Überwachung">Pile Foundation Supervision</h3>
-                        <span class="project-tag" data-en="Construction" data-de="Bauwesen">Construction</span>
-                    </div>
-                    <div class="project-content">
-                        <p data-en="Led quality control and supervision of critical pile foundation work for SG Construction Company, ensuring structural integrity and project timeline compliance." data-de="Leitete Qualitätskontrolle und Überwachung kritischer Pfahlgründungsarbeiten für SG Construction Company, um strukturelle Integrität und Projektzeitplan-Compliance sicherzustellen.">Led quality control and supervision of critical pile foundation work for SG Construction Company, ensuring structural integrity and project timeline compliance.</p>
-                        <ul class="project-highlights">
-                            <li data-en="Coordinated multiple construction teams" data-de="Koordinierte mehrere Bauteams">Coordinated multiple construction teams</li>
-                            <li data-en="Maintained quality standards throughout project" data-de="Qualitätsstandards während des gesamten Projekts aufrechterhalten">Maintained quality standards throughout project</li>
-                            <li data-en="Ensured timely milestone completion" data-de="Rechtzeitige Meilenstein-Vollendung sichergestellt">Ensured timely milestone completion</li>
-                        </ul>
-                    </div>
-                </div>
+        <article class="card" style="grid-column: span 6">
+          <h3 data-i18n="projects.p2.title">Site Supervision – SG Construction Company</h3>
+          <p class="meta" data-i18n="projects.p2.meta">Mumbai • 02/2023–11/2023</p>
+          <ul>
+            <li data-i18n="projects.p2.li1">Supervised pile foundation & finishing works; coordinated subcontractors and suppliers.</li>
+            <li data-i18n="projects.p2.li2">Resolved on‑site issues; monitored QA/QC to meet milestones.</li>
+          </ul>
+        </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-en="Precast Component Management" data-de="Fertigteil-Management">Precast Component Management</h3>
-                        <span class="project-tag" data-en="Construction" data-de="Bauwesen">Construction</span>
-                    </div>
-                    <div class="project-content">
-                        <p data-en="Managed erection of wall panels, beams, and slabs for Excel Precast Solutions, including quality checks and grouting/repair work on precast components." data-de="Verwaltete Aufrichtung von Wandpaneelen, Balken und Platten für Excel Precast Solutions, einschließlich Qualitätsprüfungen und Verfugungs-/Reparaturarbeiten an Fertigteilen.">Managed erection of wall panels, beams, and slabs for Excel Precast Solutions, including quality checks and grouting/repair work on precast components.</p>
-                        <ul class="project-highlights">
-                            <li data-en="Quality assurance for precast components" data-de="Qualitätssicherung für Fertigteile">Quality assurance for precast components</li>
-                            <li data-en="Collaborative team coordination" data-de="Kollaborative Teamkoordination">Collaborative team coordination</li>
-                            <li data-en="Technical problem-solving on-site" data-de="Technische Problemlösung vor Ort">Technical problem-solving on-site</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <article class="card" style="grid-column: span 6">
+          <h3 data-i18n="projects.p3.title">Precast QA/QC – Excel Precast Solutions</h3>
+          <p class="meta" data-i18n="projects.p3.meta">Bangalore • 10/2021–09/2022</p>
+          <ul>
+            <li data-i18n="projects.p3.li1">Managed erection of wall panels, beams, slabs; conducted grouting & repairs.</li>
+            <li data-i18n="projects.p3.li2">Assisted in quality checks of precast components and timely task completion.</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <!-- Experience & Education Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="experience-grid">
-                <div class="experience-column">
-                    <h2 class="section-title">
-                        <span data-en="Professional Experience" data-de="Berufserfahrung">Professional Experience</span>
-                    </h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-date">
-                                <span data-en="Dec 2023 - Present" data-de="Dez 2023 - Aktuell">Dec 2023 - Present</span>
-                            </div>
-                            <div class="timeline-content">
-                                <h3 data-en="Business Assistant" data-de="Geschäftsassistent">Business Assistant</h3>
-                                <h4>Best Trading, Pathanapuram</h4>
-                                <ul>
-                                    <li data-en="Implemented strategic business transformation resulting in 100% revenue growth" data-de="Strategische Geschäftstransformation mit 100% Umsatzwachstum implementiert">Implemented strategic business transformation resulting in 100% revenue growth</li>
-                                    <li data-en="Managed customer relations and technical product guidance" data-de="Kundenbeziehungen und technische Produktberatung verwaltet">Managed customer relations and technical product guidance</li>
-                                    <li data-en="Led local marketing initiatives and promotional campaigns" data-de="Lokale Marketinginitiativen und Werbekampagnen geleitet">Led local marketing initiatives and promotional campaigns</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">
-                                <span data-en="Jul 2023 - Nov 2023" data-de="Jul 2023 - Nov 2023">Jul 2023 - Nov 2023</span>
-                            </div>
-                            <div class="timeline-content">
-                                <h3 data-en="Junior Engineer" data-de="Junior-Ingenieur">Junior Engineer</h3>
-                                <h4>SG Construction Company, Mumbai</h4>
-                                <ul>
-                                    <li data-en="Supervised pile foundation and building finishing work" data-de="Pfahlgründungen und Gebäude-Finishing-Arbeiten überwacht">Supervised pile foundation and building finishing work</li>
-                                    <li data-en="Coordinated cross-functional teams to meet project milestones" data-de="Funktionsübergreifende Teams zur Erreichung von Projektzielen koordiniert">Coordinated cross-functional teams to meet project milestones</li>
-                                    <li data-en="Maintained quality standards and contractor communications" data-de="Qualitätsstandards und Auftragnehmer-Kommunikation aufrechterhalten">Maintained quality standards and contractor communications</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">
-                                <span data-en="Oct 2021 - Sep 2022" data-de="Okt 2021 - Sep 2022">Oct 2021 - Sep 2022</span>
-                            </div>
-                            <div class="timeline-content">
-                                <h3 data-en="Graduate Engineer Trainee" data-de="Graduierter Ingenieur-Trainee">Graduate Engineer Trainee</h3>
-                                <h4>Excel Precast Solutions Pvt Ltd, Bangalore</h4>
-                                <ul>
-                                    <li data-en="Managed precast component erection and quality control" data-de="Fertigteil-Aufrichtung und Qualitätskontrolle verwaltet">Managed precast component erection and quality control</li>
-                                    <li data-en="Conducted grouting and repair work on wall panels" data-de="Verfugungs- und Reparaturarbeiten an Wandpaneelen durchgeführt">Conducted grouting and repair work on wall panels</li>
-                                    <li data-en="Collaborated on timely task completion" data-de="Zusammenarbeit bei rechtzeitiger Aufgabenerfüllung">Collaborated on timely task completion</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-column">
-                    <h2 class="section-title">
-                        <span data-en="Education & Skills" data-de="Bildung & Fähigkeiten">Education & Skills</span>
-                    </h2>
-                    <div class="education-section">
-                        <h3 data-en="Education" data-de="Bildung">Education</h3>
-                        <div class="education-item">
-                            <h4 data-en="Master's in Materials Engineering" data-de="Master in Werkstofftechnik">Master's in Materials Engineering</h4>
-                            <p>RWTH Aachen University, Germany</p>
-                            <span class="education-date" data-en="Starting October 2024" data-de="Beginn Oktober 2024">Starting October 2024</span>
-                        </div>
-                        <div class="education-item">
-                            <h4 data-en="Bachelor of Engineering - Civil Engineering" data-de="Bachelor of Engineering - Bauingenieurwesen">Bachelor of Engineering - Civil Engineering</h4>
-                            <p>Mar Ephraem College of Engineering and Technology</p>
-                            <span class="education-date">2017 - 2021</span>
-                        </div>
-                    </div>
-
-                    <div class="skills-section">
-                        <h3 data-en="Technical Skills" data-de="Technische Fähigkeiten">Technical Skills</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4 data-en="Engineering Software" data-de="Ingenieur-Software">Engineering Software</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">AutoCAD</span>
-                                    <span class="skill-tag">SketchUp</span>
-                                    <span class="skill-tag">MS Office</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4 data-en="Design Tools" data-de="Design-Tools">Design Tools</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Adobe Illustrator</span>
-                                    <span class="skill-tag">InDesign</span>
-                                    <span class="skill-tag">Photoshop</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4 data-en="Languages" data-de="Sprachen">Languages</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">English (C1)</span>
-                                    <span class="skill-tag">German (Learning)</span>
-                                    <span class="skill-tag">Malayalam (Native)</span>
-                                    <span class="skill-tag">Tamil</span>
-                                    <span class="skill-tag">Hindi</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="resume" class="section" aria-labelledby="resume-title">
+      <h2 id="resume-title" data-i18n="resume.title">Résumé & Skills</h2>
+      <div class="resume-grid">
+        <div>
+          <div class="timeline" aria-label="Experience timeline">
+            <div class="timeline-item">
+              <h4 data-i18n="resume.e1.title">Business Assistant – Best Trading</h4>
+              <div class="meta" data-i18n="resume.e1.meta">Pathanapuram • 12/2023–Present</div>
+              <ul>
+                <li data-i18n="resume.e1.li1">Customer guidance and technical advice; billing operations.</li>
+                <li data-i18n="resume.e1.li2">Led local marketing: promotions, flyers, service launch.</li>
+              </ul>
             </div>
+            <div class="timeline-item">
+              <h4 data-i18n="resume.e2.title">Junior Engineer – SG Construction Company</h4>
+              <div class="meta" data-i18n="resume.e2.meta">Mumbai • 02/2023–11/2023</div>
+            </div>
+            <div class="timeline-item">
+              <h4 data-i18n="resume.e3.title">Graduate Engineer Trainee – Excel Precast Solutions</h4>
+              <div class="meta" data-i18n="resume.e3.meta">Bangalore • 10/2021–09/2022</div>
+            </div>
+          </div>
         </div>
+        <div>
+          <div class="card" style="padding:1rem">
+            <h3 data-i18n="resume.education">Education</h3>
+            <ul>
+              <li data-i18n="resume.ed1">B.E. Civil Engineering – Mar Ephraem College of Engineering & Technology (2017–2021)</li>
+              <li data-i18n="resume.ed2">Materials Engineering (RWTH Aachen University) – ongoing</li>
+            </ul>
+            <h3 data-i18n="resume.skills">Skills</h3>
+            <div class="chips" aria-label="Skill tags">
+              <span class="chip">AutoCAD</span>
+              <span class="chip">SketchUp</span>
+              <span class="chip">MS Excel</span>
+              <span class="chip">MS Word</span>
+              <span class="chip">MS PowerPoint</span>
+              <span class="chip">Adobe Illustrator</span>
+              <span class="chip">Photoshop</span>
+              <span class="chip">InDesign</span>
+              <span class="chip" data-i18n="resume.skills2">QA/QC</span>
+              <span class="chip" data-i18n="resume.skills3">Site Supervision</span>
+              <span class="chip" data-i18n="resume.skills4">Marketing & Sales</span>
+            </div>
+            <h3 data-i18n="resume.languages">Languages</h3>
+            <p class="meta" data-i18n="resume.langs">English (B2/C1), Malayalam (Native), Tamil, Hindi</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span data-en="Ready to Contribute" data-de="Bereit beizutragen">Ready to Contribute</span>
-            </h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 data-en="Available for Opportunities" data-de="Verfügbar für Gelegenheiten">Available for Opportunities</h3>
-                    <p data-en="I am relocating to Germany in October 2024 and actively seeking Werkstudent positions or part-time engineering roles while pursuing my Master's degree at RWTH Aachen University." data-de="Ich ziehe im Oktober 2024 nach Deutschland um und suche aktiv nach Werkstudentenstellen oder Teilzeit-Ingenieurspositionen, während ich meinen Master an der RWTH Aachen University absolviere.">I am relocating to Germany in October 2024 and actively seeking Werkstudent positions or part-time engineering roles while pursuing my Master's degree at RWTH Aachen University.</p>
-                    
-                    <div class="availability-info">
-                        <div class="availability-item">
-                            <h4 data-en="Immediate Availability" data-de="Sofortige Verfügbarkeit">Immediate Availability</h4>
-                            <p data-en="October 2024 onwards" data-de="Ab Oktober 2024">October 2024 onwards</p>
-                        </div>
-                        <div class="availability-item">
-                            <h4 data-en="Work Authorization" data-de="Arbeitserlaubnis">Work Authorization</h4>
-                            <p data-en="Student visa with work permissions" data-de="Studentenvisum mit Arbeitserlaubnis">Student visa with work permissions</p>
-                        </div>
-                        <div class="availability-item">
-                            <h4 data-en="Location Preference" data-de="Standortpräferenz">Location Preference</h4>
-                            <p data-en="Aachen and surrounding areas" data-de="Aachen und Umgebung">Aachen and surrounding areas</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-details">
-                    <h3 data-en="Get In Touch" data-de="Kontakt aufnehmen">Get In Touch</h3>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4 data-en="Email" data-de="E-Mail">Email</h4>
-                                <a href="mailto:georgepmathew424@gmail.com">georgepmathew424@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>LinkedIn</h4>
-                                <a href="https://www.linkedin.com/in/georgepmathew/" target="_blank">linkedin.com/in/georgepmathew</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>X (Twitter)</h4>
-                                <a href="https://x.com/EngineerGPM" target="_blank">@EngineerGPM</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>Facebook</h4>
-                                <a href="https://www.facebook.com/engineergpm/" target="_blank">facebook.com/engineergpm</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-cta">
-                        <a href="mailto:georgepmathew424@gmail.com" class="btn-primary">
-                            <span data-en="Send Message" data-de="Nachricht senden">Send Message</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/georgepmathew/" target="_blank" class="btn-secondary">
-                            <span data-en="Connect on LinkedIn" data-de="Auf LinkedIn verbinden">Connect on LinkedIn</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+      <div class="contact card">
+        <p data-i18n="contact.blurb">Based in Germany and available for Werkstudent, part‑time, or full‑time junior engineering roles. I respond within 24 hours.</p>
+        <div class="social">
+          <a class="pill" href="mailto:georgepmathew424@gmail.com" target="_blank" rel="noopener">
+            <!-- mail icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3V6Zm9 5L4 7h16l-8 4Z" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>georgepmathew424@gmail.com</span>
+          </a>
+          <a class="pill" href="https://www.linkedin.com/in/georgepmathew/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <!-- LinkedIn icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.8v2.2H12c.5-1 1.7-2.2 3.6-2.2 3.9 0 4.6 2.6 4.6 6V24h-4v-6.6c0-1.6 0-3.6-2.2-3.6s-2.6 1.7-2.6 3.5V24H8V8z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="pill" href="https://x.com/EngineerGPM" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.1 2H23l-7.2 8.3L24 22h-6.9l-5.4-7-6.2 7H0l7.7-8.7L1 2h7l4.9 6.6L20.1 2z"/></svg>
+            <span>X</span>
+          </a>
+          <a class="pill" href="https://www.facebook.com/engineergpm/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.2V12h3.2V9.4c0-3.2 1.9-5 4.8-5 1.4 0 2.8.2 2.8.2V7H16c-1.6 0-2 1-2 2v3h3.4l-.6 2.9H14v7A10 10 0 0 0 22 12z"/></svg>
+            <span>Facebook</span>
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 George P Mathew. <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">All rights reserved.</span></p>
-                <p>
-                    <span data-en="Built with precision for the German engineering market." data-de="Mit Präzision für den deutschen Ingenieurmarkt entwickelt.">Built with precision for the German engineering market.</span>
-                </p>
-            </div>
-        </div>
-    </footer>
+  <nav class="mobile-nav" aria-label="Quick navigation">
+    <div class="container bar">
+      <a href="#home" aria-label="Home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 10 12 3l9 7v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2v-9Z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="nav.home">Home</span>
+      </a>
+      <a href="#projects" aria-label="Projects">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="nav.projects">Projects</span>
+      </a>
+      <a href="#resume" aria-label="Résumé">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l3 3v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8h10M7 12h10M7 16h7" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="nav.resume">Résumé</span>
+      </a>
+      <a href="#contact" aria-label="Contact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3V6Zm9 5L4 7h16l-8 4Z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="nav.contact">Contact</span>
+      </a>
+    </div>
+  </nav>
 
-    <script src="script.js"></script>
+  <!-- Schema.org for richer Google/LinkedIn sharing -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"George P Mathew",
+    "email":"mailto:georgepmathew424@gmail.com",
+    "url":"https://georgepmathew.github.io/portfolio/",
+    "sameAs":[
+      "https://www.linkedin.com/in/georgepmathew/",
+      "https://x.com/EngineerGPM",
+      "https://www.facebook.com/engineergpm/"
+    ],
+    "jobTitle":"Civil Engineer | Materials Engineering Candidate",
+    "alumniOf":"RWTH Aachen University"
+  }
+  </script>
+
+  <!-- Minimal i18n and persistence -->
+  <script>
+    const t = {
+      en: {
+        'nav.value':'Value', 'nav.projects':'Projects', 'nav.resume':'Résumé', 'nav.contact':'Contact', 'nav.home':'Home',
+        'hero.title':'Civil Engineer & Materials Engineering Candidate (RWTH Aachen)',
+        'hero.lead':'On‑site construction experience + business transformation: designed and launched a paint service model that doubled revenue in one year. Seeking Werkstudent/Junior roles in Germany.',
+        'hero.cta':'See proof', 'hero.cta2':'Hire me',
+        'hero.badge1':'Engineering credibility first', 'hero.badge2':'Available now in Germany', 'hero.badge3':'Open to part‑time & full‑time',
+        'value.title':'Value proposition',
+        'value.v1.title':'On‑Site Engineering', 'value.v1.copy':'Supervised pile foundations, precast erection, finishing works; ensured quality and on‑time milestones.',
+        'value.v2.title':'Commercial Acumen', 'value.v2.copy':'Launched a paint service at Best Trading; market analysis → service design → local marketing → 100% sales growth in 12 months.',
+        'value.v3.title':'Advanced Academics', 'value.v3.copy':'Materials Engineering Studies (RWTH Aachen). Strong software stack: AutoCAD, SketchUp, MS Office; Adobe suite.',
+        'projects.title':'Project showcase',
+        'projects.p1.title':'Business Transformation – Best Trading (Paint Service)', 'projects.p1.meta':'Pathanapuram • 2023–2024',
+        'projects.p1.li1':'Challenge: sales plateau with passive retail model.', 'projects.p1.li2':'Action: created a bundled paint service (consultation + supply + application), priced & promoted locally.', 'projects.p1.li3':'Result: doubled total revenue within 1 year; improved customer retention and referrals.',
+        'projects.p2.title':'Site Supervision – SG Construction Company', 'projects.p2.meta':'Mumbai • 02/2023–11/2023',
+        'projects.p2.li1':'Supervised pile foundation & finishing works; coordinated subcontractors and suppliers.', 'projects.p2.li2':'Resolved on‑site issues; monitored QA/QC to meet milestones.',
+        'projects.p3.title':'Precast QA/QC – Excel Precast Solutions', 'projects.p3.meta':'Bangalore • 10/2021–09/2022', 'projects.p3.li1':'Managed erection of wall panels, beams, slabs; conducted grouting & repairs.', 'projects.p3.li2':'Assisted in quality checks of precast components and timely task completion.',
+        'resume.title':'Résumé & Skills', 'resume.education':'Education', 'resume.skills':'Skills', 'resume.skills2':'QA/QC', 'resume.skills3':'Site Supervision', 'resume.skills4':'Marketing & Sales', 'resume.languages':'English (B2/C1), Malayalam (Native), Tamil, Hindi',
+        'resume.e1.title':'Business Assistant – Best Trading', 'resume.e1.meta':'Pathanapuram • 12/2023–Present', 'resume.e1.li1':'Customer guidance and technical advice; billing operations.', 'resume.e1.li2':'Led local marketing: promotions, flyers, service launch.',
+        'resume.e2.title':'Junior Engineer – SG Construction Company', 'resume.e2.meta':'Mumbai • 02/2023–11/2023',
+        'resume.e3.title':'Graduate Engineer Trainee – Excel Precast Solutions', 'resume.e3.meta':'Bangalore • 10/2021–09/2022',
+        'contact.title':'Contact', 'contact.blurb':'Based in Germany and available for Werkstudent, part‑time, or full‑time junior engineering roles. I respond within 24 hours.'
+      },
+      de: {
+        'nav.value':'Mehrwert', 'nav.projects':'Projekte', 'nav.resume':'Lebenslauf', 'nav.contact':'Kontakt', 'nav.home':'Start',
+        'hero.title':'Bauingenieur & Masterstudent Werkstofftechnik (RWTH Aachen)',
+        'hero.lead':'Praxis auf der Baustelle + Transformation im Geschäft: Entwicklung und Einführung eines Maler‑Service, der den Umsatz in 12 Monaten verdoppelte. Suche Werkstudenten‑/Junior‑Positionen in Deutschland.',
+        'hero.cta':'Belege ansehen', 'hero.cta2':'Jetzt anfragen',
+        'hero.badge1':'Technische Glaubwürdigkeit zuerst', 'hero.badge2':'Sofort verfügbar in Deutschland', 'hero.badge3':'Teilzeit & Vollzeit möglich',
+        'value.title':'Ihr Nutzen',
+        'value.v1.title':'Praxis auf der Baustelle', 'value.v1.copy':'Überwachung von Pfahlgründungen, Montage von Fertigteilen und Ausbau; Qualität & Termine gesichert.',
+        'value.v2.title':'Kaufmännisches Verständnis', 'value.v2.copy':'Einführung eines Maler‑Services bei Best Trading; Marktanalyse → Leistungsdesign → lokale Vermarktung → 100% Umsatzwachstum in 12 Monaten.',
+        'value.v3.title':'Akademischer Hintergrund', 'value.v3.copy':'Studium Werkstofftechnik (RWTH Aachen). Software: AutoCAD, SketchUp, MS Office; Adobe‑Suite.',
+        'projects.title':'Projektbeispiele',
+        'projects.p1.title':'Business‑Transformation – Best Trading (Maler‑Service)', 'projects.p1.meta':'Pathanapuram • 2023–2024',
+        'projects.p1.li1':'Herausforderung: Umsatzstagnation im passiven Einzelhandel.', 'projects.p1.li2':'Vorgehen: Paketierter Maler‑Service (Beratung + Lieferung + Ausführung), bepreist & lokal beworben.', 'projects.p1.li3':'Ergebnis: Verdopplung des Gesamtumsatzes in 12 Monaten; höhere Kundenbindung.',
+        'projects.p2.title':'Bauleitung – SG Construction Company', 'projects.p2.meta':'Mumbai • 02/2023–11/2023',
+        'projects.p2.li1':'Überwachung von Pfahlgründung & Ausbau; Koordination von Nachunternehmern und Lieferanten.', 'projects.p2.li2':'Lösen von Baustellenproblemen; QA/QC‑Kontrolle.',
+        'projects.p3.title':'Fertigteil‑QA/QC – Excel Precast Solutions', 'projects.p3.meta':'Bangalore • 10/2021–09/2022', 'projects.p3.li1':'Montage von Wänden, Trägern, Platten; Verfugung & Reparatur.', 'projects.p3.li2':'Qualitätsprüfungen der Fertigteile und termingerechte Umsetzung.',
+        'resume.title':'Lebenslauf & Skills', 'resume.education':'Ausbildung', 'resume.skills':'Fähigkeiten', 'resume.skills2':'QA/QC', 'resume.skills3':'Bauleitung', 'resume.skills4':'Marketing & Vertrieb', 'resume.languages':'Englisch (B2/C1), Malayalam (Muttersprache), Tamil, Hindi',
+        'resume.e1.title':'Business Assistant – Best Trading', 'resume.e1.meta':'Pathanapuram • 12/2023–Heute', 'resume.e1.li1':'Kundenberatung & technische Auskünfte; Abrechnung.', 'resume.e1.li2':'Lokales Marketing geleitet: Aktionen, Flyer, Service‑Launch.',
+        'resume.e2.title':'Junior Engineer – SG Construction Company', 'resume.e2.meta':'Mumbai • 02/2023–11/2023',
+        'resume.e3.title':'Trainee – Excel Precast Solutions', 'resume.e3.meta':'Bangalore • 10/2021–09/2022',
+        'contact.title':'Kontakt', 'contact.blurb':'Ansässig in Deutschland; verfügbar für Werkstudenten‑, Teilzeit‑ oder Junior‑Vollzeitstellen. Antwort innerhalb von 24 Stunden.'
+      }
+    };
+
+    const setLang = (lang) => {
+      const dict = t[lang] || t.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(dict[key]) el.textContent = dict[key];
+      });
+      localStorage.setItem('lang', lang);
+      document.getElementById('lang-en').classList.toggle('active', lang==='en');
+      document.getElementById('lang-de').classList.toggle('active', lang==='de');
+      document.getElementById('lang-en').setAttribute('aria-pressed', lang==='en');
+      document.getElementById('lang-de').setAttribute('aria-pressed', lang==='de');
+    };
+
+    document.getElementById('lang-en').addEventListener('click', ()=>setLang('en'));
+    document.getElementById('lang-de').addEventListener('click', ()=>setLang('de'));
+    setLang(localStorage.getItem('lang')||'en');
+  </script>
 </body>
 </html>
