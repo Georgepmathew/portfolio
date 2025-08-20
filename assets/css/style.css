@@ -1,63 +1,145 @@
+/* assets/css/style.css
+   Professional responsive styles (mobile-first)
+   Author: for George P Mathew portfolio
+*/
+
+/* --------- variables & base --------- */
 :root{
-  --bg: #ffffff; --text: #0f172a; --muted:#475569; --brand:#003366; --accent:#0ea5e9; --line:#e2e8f0;
-  --card:#f8fafc; --shadow:0 10px 30px rgba(2,6,23,.08);
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --accent-1:#0b74ff;
+  --accent-2:#00b4d8;
+  --card:#fbfdff;
+  --line:#e6eefc;
+  --glass:rgba(255,255,255,0.85);
+  --shadow: 0 10px 30px rgba(2,6,23,.08);
+  --radius-lg:14px;
+  --max-width:1100px;
+  --container-pad:20px;
 }
+
+/* base */
 *{box-sizing:border-box}
-html,body{margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text)}
-a{color:var(--brand); text-decoration:none}
+html,body{height:100%; margin:0; font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+a{color:var(--accent-1); text-decoration:none}
 a:hover{text-decoration:underline}
-.container{width:min(1100px, 92%); margin-inline:auto}
+.container{width:100%; max-width:var(--max-width); margin:0 auto; padding-left:var(--container-pad); padding-right:var(--container-pad)}
 
-/* NAVIGATION */
-header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.9); border-bottom:1px solid var(--line); z-index:50}
-.nav{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
-.nav a.logo{display:flex; align-items:center; gap:.65rem; font-weight:700; color:var(--text)}
-.nav .links{display:flex; gap:1rem; align-items:center}
-.nav .links a{padding:.5rem .75rem; border-radius:10px}
-.nav .links a:hover{background:var(--card)}
+/* skip link */
+.skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+.skip-link:focus{left:12px; top:12px; width:auto; height:auto; padding:.5rem .75rem; background:#111; color:#fff; z-index:9999; border-radius:6px}
+
+/* -------- header -------- */
+.site-header{border-bottom:1px solid var(--line); background:linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.9)); position:sticky; top:0; z-index:60}
+.header-row{display:flex; align-items:center; gap:1rem; justify-content:space-between; padding:12px 0}
+.brand{display:flex; align-items:center; gap:12px; color:var(--text); text-decoration:none}
+.brand-mark{flex:0 0 auto}
+.brand-text .name{font-weight:800; line-height:1; letter-spacing:.2px}
+.brand-text .role{font-size:.86rem; color:var(--muted)}
+
+/* desktop nav */
+.nav-desktop{display:none; align-items:center; gap:14px}
+.nav-desktop a{padding:8px 10px; border-radius:9px; font-weight:600; color:var(--text)}
 .lang-toggle{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden}
-.lang-toggle button{padding:.35rem .65rem; border:0; background:none; font-weight:600; color:var(--muted); cursor:pointer}
-.lang-toggle button.active{background:var(--text); color:#fff}
+.lang-btn{background:none; border:0; padding:.35rem .6rem; font-weight:700; color:var(--muted); cursor:pointer}
+.lang-btn.active{background:var(--text); color:#fff}
 
-/* HERO */
-.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center; padding:3rem 0}
-.hero h1{font-size:clamp(1.8rem, 3vw, 3rem); line-height:1.1; margin:0}
-.hero p.lead{font-size:clamp(1rem, 1.3vw, 1.2rem); color:var(--muted)}
-.hero .cta{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem}
-.btn{display:inline-flex; align-items:center; gap:.5rem; border:1px solid var(--text); color:#fff; background:var(--text); padding:.7rem 1rem; border-radius:12px; font-weight:600}
-.btn.secondary{background:#fff; color:var(--text)}
-.btn:hover{box-shadow:var(--shadow)}
-.headshot{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:24px; box-shadow:var(--shadow); background:#e5e7eb}
+/* mobile controls */
+.mobile-controls{display:flex; gap:.6rem; align-items:center}
+.menu-btn{background:#0f172a10;border:0;padding:.4rem;border-radius:10px; display:flex; align-items:center; justify-content:center; cursor:pointer}
 
-/* SECTIONS */
-.section{padding:2.5rem 0; border-top:1px solid var(--line)}
-.section h2{font-size:1.6rem; margin:0 0 1rem}
-.chips{display:flex; gap:.6rem; flex-wrap:wrap}
-.chip{padding:.5rem .7rem; border:1px solid var(--line); border-radius:999px; background:#fff; font-weight:600}
+/* mobile menu overlay */
+.mobile-menu{position:fixed; inset:0; display:flex; flex-direction:column; gap:1rem; padding:2.4rem; background:linear-gradient(180deg, rgba(15,23,42,0.98), rgba(2,6,23,0.98)); color:#fff; transform:translateY(100%); transition:transform .36s cubic-bezier(.2,.9,.2,1); z-index:80; visibility:hidden}
+.mobile-menu.open{transform:translateY(0); visibility:visible}
+.menu-close{margin-left:auto; background:none; border:0; font-size:38px; color:#fff; line-height:1; cursor:pointer}
+.mobile-menu nav{display:flex; flex-direction:column; gap:14px; margin-top:10px}
+.mobile-link{color:#fff; font-weight:700; font-size:1.1rem}
+.mobile-social{margin-top:auto; display:flex; gap:.6rem; flex-direction:column}
+.mobile-social .pill{background:#fff2;padding:.5rem .6rem; color:#fff; opacity:.9}
 
-/* CARDS */
-.cards{display:grid; grid-template-columns:repeat(12, 1fr); gap:1rem}
-.card{grid-column: span 12; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:1rem; box-shadow:var(--shadow)}
-.card h3{margin:.3rem 0 .5rem}
-.card.featured{grid-column: span 12}
+/* -------- hero -------- */
+.hero{display:flex; flex-direction:column; gap:18px; padding:28px 0}
+.hero-title{font-weight:800; font-size:clamp(1.4rem, 4vw, 2.2rem); margin:0; line-height:1.02}
+.accent{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero-sub{color:var(--muted); font-size:clamp(.95rem, 2.3vw, 1.02rem); margin-top:.5rem; max-width:68ch}
+.hero-cta{display:flex; gap:.8rem; margin-top:1rem; align-items:center}
+.btn{display:inline-flex; align-items:center; gap:.6rem; padding:.65rem .9rem; border-radius:12px; font-weight:800; border:1px solid transparent; cursor:pointer; font-size:.96rem}
+.btn.primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff}
+.btn.ghost{background:transparent; color:var(--text); border:1px solid var(--line)}
+.hero-highlights{display:flex; gap:10px; list-style:none; padding:0; margin:10px 0 0; flex-wrap:wrap; color:var(--muted)}
+.hero-highlights li{background:#f8fbff; padding:.45rem .7rem; border-radius:999px; font-weight:700; color:var(--accent-1)}
 
-/* RESUME */
-.resume-grid{display:grid; grid-template-columns: 1fr 1fr; gap:1rem}
-.timeline{border-left:3px solid var(--line); padding-left:1rem}
-.timeline-item{margin-bottom:1rem}
-.timeline-item h4{margin:.1rem 0}
-.meta{color:var(--muted); font-size:.95rem}
+/* hero figure */
+.hero-figure{width:100%; max-width:360px; margin-top:6px; align-self:center; border-radius:18px; overflow:hidden; box-shadow:var(--shadow)}
+.headshot{width:100%; height:100%; object-fit:cover; display:block}
 
-/* CONTACT */
-.contact{display:grid; grid-template-columns: 1fr; gap:1rem}
-.social{display:flex; gap:.7rem; align-items:center; flex-wrap:wrap}
-.pill{display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .8rem; border:1px solid var(--line); border-radius:999px; background:#fff}
+/* -------- sections -------- */
+.section{padding:26px 0; border-top:1px solid var(--line)}
+.section h2{font-size:1.05rem; font-weight:800; margin:0 0 12px}
 
-/* MOBILE NAV */
-.mobile-nav{position:sticky; bottom:0; border-top:1px solid var(--line); background:#fff; display:none}
-.mobile-nav .bar{display:flex; justify-content:space-around; padding:.5rem}
-.mobile-nav a{display:flex; flex-direction:column; align-items:center; font-size:.8rem; color:var(--muted); padding:.35rem .2rem}
+/* grid helpers */
+.grid-3{display:grid; grid-template-columns:1fr; gap:12px}
+.grid-2{display:grid; grid-template-columns:1fr; gap:12px}
 
-/* RESPONSIVE */
-@media (max-width: 900px){.hero{grid-template-columns:1fr; padding:2rem 0}}
-@media (max-width: 720px){.resume-grid{grid-template-columns:1fr}.mobile-nav{display:block}header{position:sticky}}
+/* cards */
+.card{background:var(--card); border:1px solid var(--line); padding:14px; border-radius:12px; box-shadow:var(--shadow)}
+.featured{display:grid; grid-template-columns:1fr; gap:12px; align-items:start}
+.featured .featured-right{display:none} /* hidden on small */
+
+/* meta, impact */
+.meta{color:var(--muted); font-size:.9rem}
+.impact{color:var(--accent-1); font-weight:800; margin-top:.4rem}
+.stat-pill{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff; padding:.6rem .8rem; border-radius:12px; text-align:center; font-weight:800}
+.stat-note{color:var(--muted); font-size:.9rem; margin-top:6px}
+
+/* resume */
+.resume-wrap{display:grid; grid-template-columns:1fr; gap:14px}
+.profile-row{display:flex; gap:12px; align-items:center}
+.resume-photo{width:74px;height:74px;border-radius:12px;object-fit:cover; box-shadow:var(--shadow);border:1px solid rgba(15,23,42,.04)}
+.resume-left .experience{margin-top:12px}
+.exp-card{background:linear-gradient(180deg,#fff,#fbfdff); padding:12px; border-radius:10px; border:1px solid var(--line); margin-bottom:10px}
+.exp-head{display:flex; justify-content:space-between; gap:8px; align-items:center; margin-bottom:6px}
+.exp-meta{color:var(--muted); font-weight:600; font-size:.9rem}
+.resume-right .skill-card{padding:12px; border-radius:12px; border:1px solid var(--line); background:linear-gradient(180deg,#fff,#fbfdff); box-shadow:var(--shadow)}
+
+/* skill bars */
+.skill{margin-top:.7rem}
+.label{display:flex; justify-content:space-between; font-weight:700; font-size:.95rem; color:var(--text)}
+.bar{height:10px; background:#eaf6ff; border-radius:999px; overflow:hidden; margin-top:.35rem}
+.fill{height:100%; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); border-radius:999px}
+
+/* chips */
+.chips span{display:inline-block; background:#fff; border:1px solid var(--line); padding:.38rem .6rem; border-radius:8px; font-weight:700}
+
+/* contact */
+.contact-card{display:flex; flex-direction:column; gap:12px}
+.contact-grid{display:flex; gap:10px; flex-wrap:wrap}
+.pill{display:inline-flex; align-items:center; gap:.5rem; padding:.5rem .65rem; border-radius:10px; border:1px solid var(--line); background:#fff}
+
+/* footer */
+.site-footer{border-top:1px solid var(--line); padding:18px 0; text-align:center; color:var(--muted)}
+
+/* -------- responsive: tablet & up -------- */
+@media (min-width:720px){
+  .nav-desktop{display:flex}
+  .mobile-controls{display:none}
+  .hero{flex-direction:row; align-items:center; gap:28px; padding:44px 0}
+  .hero-content{flex:1}
+  .hero-figure{flex:0 0 360px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .featured{grid-template-columns:1fr 360px}
+  .featured .featured-right{display:block}
+  .resume-wrap{grid-template-columns:1fr 360px}
+  .resume-right{position:sticky; top:92px; align-self:start}
+}
+
+/* desktop wide */
+@media (min-width:1100px){
+  .container{padding-left:32px; padding-right:32px}
+  .hero-title{font-size:clamp(2rem, 3.6vw, 2.8rem)}
+}
+
+/* small visual tweaks */
+button:focus, a:focus{outline:3px solid #cfe9ff; outline-offset:2px; border-radius:8px}
