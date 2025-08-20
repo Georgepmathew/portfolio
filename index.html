@@ -4,370 +4,362 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>George P Mathew — Civil Engineer | Materials Engineering student (RWTH Aachen)</title>
-  <meta name="description" content="George P Mathew — Civil Engineer with site experience and business transformation results. Materials Engineering student at RWTH Aachen. Available for Werkstudent and junior roles in Germany." />
+  <meta name="description" content="George P Mathew — Civil Engineer with site experience and commercial impact. M.Sc. Materials Engineering student at RWTH Aachen. Available for Werkstudent & junior roles in Germany." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Social preview -->
+  <!-- social preview -->
   <meta property="og:title" content="George P Mathew — Civil Engineer (RWTH Aachen)">
-  <meta property="og:description" content="On-site construction experience + business transformation. Available for Werkstudent & junior engineering roles in Germany.">
+  <meta property="og:description" content="On-site supervision + business results. Available for Werkstudent & junior roles in Germany.">
   <meta property="og:image" content="assets/img/social-preview.png">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#ffffff">
-  <style>
-    /* Small page-specific CSS overrides for a modern look (kept tiny) */
-    :root{
-      --accent-grad: linear-gradient(135deg,#0b74ff 0%, #00b4d8 100%);
-      --card-bg: rgba(255,255,255,0.85);
-    }
-    /* Hero tweaks for a more professional feel */
-    .hero { padding:4rem 0; gap:2.5rem; align-items:center; }
-    .hero .lead { color: #334155; font-size:1.05rem; }
-    .hero-figure { border-radius:20px; overflow:hidden; box-shadow: 0 12px 30px rgba(2,6,23,.12); background: linear-gradient(180deg,#fbfdff, #f7fbff);}
-    .stat {display:inline-flex; align-items:center; gap:.6rem; padding:.45rem .7rem; border-radius:999px; background:rgba(11,116,255,.08); color:#0b74ff; font-weight:700; margin-right:.6rem}
-    .featured .meta { color:#0f172a; font-weight:600; }
-    footer{padding:2rem 0; color:#64748b; font-size:.95rem; text-align:center}
-    /* Slightly larger CTAs */
-    .btn { padding:.85rem 1.1rem; border-radius:14px; font-weight:700; letter-spacing:.2px }
-    @media (max-width:900px){
-      .hero{padding:2rem 0}
-      .stat{margin-bottom:.6rem}
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="container nav" role="navigation" aria-label="Main navigation">
-      <a class="logo" href="#home" aria-label="Home">
-        <!-- monogram -->
-        <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#0f172a"/><text x="50%" y="55%" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="18" fill="#fff">GPM</text></svg>
-        <span style="font-weight:800; letter-spacing:.4px">George P Mathew</span>
+  <!-- Accessible skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <a class="brand" href="#home" aria-label="George P Mathew home">
+        <svg class="brand-mark" width="44" height="44" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#0f172a"/><text x="50%" y="56%" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="14" fill="#fff">GPM</text></svg>
+        <div class="brand-text">
+          <div class="name">George P Mathew</div>
+          <div class="role">Civil Engineer • Materials Engineering student (RWTH Aachen)</div>
+        </div>
       </a>
 
-      <nav class="links" role="navigation" aria-label="Sections">
+      <nav class="nav-desktop" role="navigation" aria-label="Primary navigation">
         <a href="#value" data-i18n="nav.value">Value</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#resume" data-i18n="nav.resume">Résumé</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
 
-        <!-- language toggle (inline, accessible) -->
-        <div class="lang-toggle" role="group" aria-label="Language toggle" style="margin-left:.8rem">
-          <button id="lang-en" class="active" data-lang="en" aria-pressed="true">EN</button>
-          <button id="lang-de" data-lang="de" aria-pressed="false">DE</button>
+        <!-- language toggle -->
+        <div class="lang-toggle" role="group" aria-label="Language toggle">
+          <button id="lang-en" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button id="lang-de" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
         </div>
-
-        <!-- hamburger for small screens -->
-        <button id="menu-btn" aria-label="Open menu" style="display:none; margin-left:1rem; background:none; border:0; cursor:pointer">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
       </nav>
+
+      <!-- mobile controls -->
+      <div class="mobile-controls">
+        <div class="lang-toggle" role="group" aria-label="Language toggle small">
+          <button id="m-lang-en" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button id="m-lang-de" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+        </div>
+        <button id="menu-open" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile overlay menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <button id="menu-close" class="menu-close" aria-label="Close menu">&times;</button>
+      <nav role="navigation" aria-label="Mobile primary">
+        <a href="#value" class="mobile-link">Value</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#resume" class="mobile-link">Résumé</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+      <div class="mobile-social">
+        <a class="pill" href="mailto:georgepmathew424@gmail.com">georgepmathew424@gmail.com</a>
+        <a class="pill" href="https://www.linkedin.com/in/georgepmathew/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </header>
 
-  <main id="home" class="container">
+  <main id="main" class="container">
     <!-- HERO -->
-    <section class="hero" aria-labelledby="intro-title">
-      <div>
-        <h1 id="intro-title" data-i18n="hero.title" style="margin-bottom:.5rem">
-          Civil Engineer & <span style="background:var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent">Materials Engineering student</span>
-          <span style="display:block; font-size:.95rem; color:#64748b; margin-top:.45rem; font-weight:600">RWTH Aachen University — Werkstudent & Junior roles welcome</span>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero.title">
+          Civil Engineer & <span class="accent">Materials Engineering student</span>
         </h1>
-
-        <p class="lead" data-i18n="hero.lead">
-          I bring hands-on site supervision experience and commercial initiative — launched a paint-service that doubled local revenue in 12 months. I’m available for Werkstudent / part-time roles now and full-time after graduation.
+        <p class="hero-sub" data-i18n="hero.lead">
+          Hands-on site supervision and commercial initiative — launched a paint-service that doubled local revenue in 12 months. Available for Werkstudent / part-time now; full-time after graduation.
         </p>
 
-        <div style="margin-top:1.1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
-          <a class="btn" href="#projects" data-i18n="hero.cta" style="background:var(--accent-grad); color:#fff; border:0">See case study</a>
-          <a class="btn secondary" href="cv/george-cv-en.pdf" target="_blank" rel="noopener" data-i18n="hero.cta2" style="border:1px solid #e6eefc">Download CV (EN)</a>
-          <div style="display:flex; align-items:center; gap:.6rem; margin-left:auto">
-            <span class="stat" aria-hidden="true">+100% Revenue</span>
-            <small style="color:#64748b">Business transformation — Best Trading</small>
-          </div>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects" data-i18n="hero.cta">See case study</a>
+          <a class="btn ghost" href="cv/george-cv-en.pdf" target="_blank" rel="noopener" data-i18n="hero.cta2">Download CV (EN)</a>
         </div>
 
-        <div style="margin-top:1.6rem; display:flex; gap:.5rem; flex-wrap:wrap">
-          <span class="chip">On-site Supervision</span>
-          <span class="chip">Precast QA/QC</span>
-          <span class="chip">Commercial Projects</span>
-          <span class="chip">AutoCAD • Excel</span>
-        </div>
+        <ul class="hero-highlights">
+          <li><strong>+100%</strong> total revenue (Best Trading)</li>
+          <li><strong>Site supervision</strong> — pile foundations, precast erection</li>
+          <li><strong>QA / QC</strong> experience on precast components</li>
+        </ul>
       </div>
 
-      <aside class="hero-figure" style="width:340px; max-width:38vw;">
-        <!-- headshot should be placed in assets/img/headshot.jpg -->
-        <img src="assets/img/headshot.jpg" alt="George P Mathew portrait" style="width:100%; height:100%; object-fit:cover; display:block" />
-      </aside>
+      <figure class="hero-figure">
+        <img src="assets/img/headshot.jpg" alt="Portrait of George P Mathew" class="headshot">
+      </figure>
     </section>
 
     <!-- VALUE -->
-    <section id="value" class="section" aria-labelledby="value-title">
-      <h2 id="value-title" data-i18n="value.title">What I bring</h2>
-      <div class="cards" style="grid-template-columns: repeat(12,1fr); gap:1rem;">
-        <article class="card" style="grid-column: span 4">
+    <section id="value" class="section">
+      <h2 data-i18n="value.title">What I bring</h2>
+      <div class="grid-3">
+        <div class="card">
           <h3 data-i18n="value.v1.title">On-site engineering</h3>
-          <p class="meta" data-i18n="value.v1.copy">Supervision of pile foundations, precast erection, QA checks, and coordination to deliver milestones on time.</p>
-        </article>
-        <article class="card" style="grid-column: span 4">
+          <p data-i18n="value.v1.copy">Supervision of pile foundations, precast erection and finishing; ensuring quality and timely milestones.</p>
+        </div>
+        <div class="card">
           <h3 data-i18n="value.v2.title">Commercial acumen</h3>
-          <p class="meta" data-i18n="value.v2.copy">Designed & launched a paint-service at Best Trading — market fit, pricing & local launch that doubled yearly revenue.</p>
-        </article>
-        <article class="card" style="grid-column: span 4">
+          <p data-i18n="value.v2.copy">Launched a paint service at Best Trading — market fit, pricing & local launch; measurable revenue growth.</p>
+        </div>
+        <div class="card">
           <h3 data-i18n="value.v3.title">Academic & lab focus</h3>
-          <p class="meta" data-i18n="value.v3.copy">Materials Engineering student (RWTH Aachen). Strong practical & lab-focused approach to materials performance and durability.</p>
-        </article>
+          <p data-i18n="value.v3.copy">M.Sc. Materials Engineering (RWTH Aachen). Focus on materials performance and durability in the lab and field.</p>
+        </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECT -->
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <h2 id="projects-title" data-i18n="projects.title">Featured project — Business Transformation</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 data-i18n="projects.title">Featured project – Business Transformation</h2>
 
-      <div class="cards" style="grid-template-columns:repeat(12,1fr); gap:1rem;">
-        <article class="card featured" style="display:grid; grid-template-columns: 1fr 360px; gap:1rem; align-items:start">
-          <div>
-            <h3 data-i18n="projects.p1.title">Best Trading — Paint Service (Pathanapuram)</h3>
-            <p class="meta">Role: Concept lead • Timeline: 2023–2024</p>
+      <article class="featured">
+        <div class="featured-left">
+          <h3 data-i18n="projects.p1.title">Best Trading — Paint Service (Pathanapuram)</h3>
+          <p class="meta">Role: Concept lead • 2023–2024</p>
 
-            <h4 style="margin-top:1rem">Challenge</h4>
-            <p>Passive retail sales and low customer retention; untapped local demand for end-to-end painting service.</p>
+          <h4>Challenge</h4>
+          <p>Passive retail model with stagnant growth and low retention.</p>
 
-            <h4 style="margin-top:.6rem">My approach</h4>
-            <ul>
-              <li>Market analysis & pricing model for bundled service (consult → supply → application).</li>
-              <li>Service process design, training of teams, local promotions & referral programs.</li>
-              <li>Operational KPIs: lead-to-sale tracking, margin control, quality checks.</li>
-            </ul>
+          <h4>Approach</h4>
+          <ul>
+            <li>Market analysis and package design (consult → supply → application).</li>
+            <li>Operational plan and local launch (pricing, supplier coordination, promotions).</li>
+            <li>KPIs: conversion, margin tracking and repeat rate monitoring.</li>
+          </ul>
 
-            <h4 style="margin-top:.6rem">Impact</h4>
-            <p class="meta">Revenue doubled within 12 months; improved repeat business and referral rate.</p>
-          </div>
+          <h4>Impact</h4>
+          <p class="impact"><strong>+100% total revenue in 12 months</strong> — better customer retention and referrals.</p>
+        </div>
 
-          <aside style="padding:1rem; border-radius:12px; background:linear-gradient(180deg,#fafcff,#f3f9ff); height:100%">
-            <!-- Small infographic made with inline SVG -->
-            <svg viewBox="0 0 200 120" width="100%" aria-hidden="true" style="display:block">
-              <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#0b74ff"/><stop offset="1" stop-color="#00b4d8"/></linearGradient></defs>
-              <rect x="0" y="0" width="200" height="120" rx="10" fill="#ffffff00"/>
-              <g transform="translate(8,16)">
-                <text x="0" y="0" fill="#0f172a" font-size="12" font-weight="700">Sales (monthly)</text>
-                <g transform="translate(0,8)" fill="#cfe9ff">
-                  <rect x="0" y="30" width="20" height="40" rx="3" fill="#e6f2ff"/>
-                  <rect x="32" y="20" width="20" height="50" rx="3" fill="#d1ecff"/>
-                  <rect x="64" y="8" width="20" height="62" rx="3" fill="url(#g)"/>
-                  <rect x="96" y="2" width="20" height="68" rx="3" fill="url(#g)"/>
-                </g>
-                <text x="0" y="90" font-size="10" fill="#64748b">Before → After (12 months)</text>
-              </g>
-            </svg>
+        <aside class="featured-right" aria-hidden="true">
+          <!-- small infographic -->
+          <svg class="mini-chart" viewBox="0 0 200 120" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#0b74ff"/><stop offset="1" stop-color="#00b4d8"/></linearGradient></defs><g><rect x="10" y="30" width="30" height="60" rx="4" fill="#e6f3ff"/><rect x="60" y="18" width="30" height="72" rx="4" fill="#d1ecff"/><rect x="110" y="6" width="30" height="84" rx="4" fill="url(#lg)"/><rect x="160" y="2" width="30" height="88" rx="4" fill="url(#lg)"/></g></svg>
 
-            <div style="margin-top:10px; font-weight:700; color:#0b74ff">+100% Total Revenue</div>
-            <div style="font-size:.95rem; color:#475569; margin-top:6px">Improved customer retention & referrals</div>
-          </aside>
-        </article>
+          <div class="stat-pill"><strong>+100%</strong> revenue</div>
+          <div class="stat-note">Pathanapuram — 12 months</div>
+        </aside>
+      </article>
 
-        <!-- Two smaller cards -->
-        <article class="card" style="grid-column: span 6">
-          <h3 data-i18n="projects.p2.title">Site Supervision — SG Construction</h3>
+      <div class="grid-2" style="margin-top:1rem">
+        <div class="card">
+          <h4 data-i18n="projects.p2.title">Site supervision — SG Construction</h4>
           <p class="meta" data-i18n="projects.p2.meta">Mumbai • 02/2023–11/2023</p>
           <ul>
-            <li>Supervised pile foundations, coordinated subcontractors & suppliers.</li>
-            <li>Implemented QA checks and ensured milestone delivery.</li>
+            <li>Pile foundations & finishing coordination</li>
+            <li>QA checks to meet quality milestones</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="card" style="grid-column: span 6">
-          <h3 data-i18n="projects.p3.title">Precast QA/QC — Excel Precast Solutions</h3>
+        <div class="card">
+          <h4 data-i18n="projects.p3.title">Precast QA/QC — Excel Precast</h4>
           <p class="meta" data-i18n="projects.p3.meta">Bangalore • 10/2021–09/2022</p>
           <ul>
-            <li>Managed erection of precast wall panels, beams & slabs.</li>
-            <li>Performed checks before & after concreting, and ensured proper curing & handling.</li>
+            <li>Erection of wall panels, beams & slabs</li>
+            <li>Pre/post concrete checks and curing monitoring</li>
           </ul>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- RESUME -->
-    <section id="resume" class="section" aria-labelledby="resume-title">
-      <h2 id="resume-title" data-i18n="resume.title">Résumé & skills</h2>
+    <!-- RESUME (creative, professional) -->
+    <section id="resume" class="section">
+      <div class="resume-wrap">
+        <div class="resume-left">
+          <div class="profile-row">
+            <img src="assets/img/headshot.jpg" alt="George P Mathew portrait" class="resume-photo">
+            <div>
+              <h3 data-i18n="resume.title">George P Mathew</h3>
+              <div class="meta">M.Sc. Materials Engineering student — RWTH Aachen</div>
+              <div class="quickline">Available: Werkstudent / Part-time now • Full-time after graduation</div>
+            </div>
+          </div>
 
-      <div class="resume-grid">
-        <div>
-          <div class="timeline" aria-label="Experience timeline">
-            <div class="timeline-item">
-              <h4 data-i18n="resume.e1.title">Business Assistant — Best Trading</h4>
-              <div class="meta" data-i18n="resume.e1.meta">Pathanapuram • 12/2023–Present</div>
+          <div class="experience">
+            <h4>Experience</h4>
+
+            <div class="exp-card">
+              <div class="exp-head"><strong>Business Assistant — Best Trading</strong> <span class="exp-meta">Pathanapuram • 12/2023–Present</span></div>
               <ul>
-                <li data-i18n="resume.e1.li1">Customer guidance, service design & operations.</li>
-                <li data-i18n="resume.e1.li2">Led the paint-service project: strategy, launch & growth.</li>
+                <li>Customer guidance, service design & daily operations.</li>
+                <li>Led paint-service launch: market fit, pricing & promotions.</li>
               </ul>
             </div>
 
-            <div class="timeline-item">
-              <h4 data-i18n="resume.e2.title">Junior Engineer — SG Construction Company</h4>
-              <div class="meta" data-i18n="resume.e2.meta">Mumbai • 02/2023–11/2023</div>
+            <div class="exp-card">
+              <div class="exp-head"><strong>Junior Engineer — SG Construction</strong> <span class="exp-meta">Mumbai • 02/2023–11/2023</span></div>
+              <ul>
+                <li>Supervised pile foundations & finishing works.</li>
+                <li>Coordinated subcontractors and monitored QA.</li>
+              </ul>
             </div>
 
-            <div class="timeline-item">
-              <h4 data-i18n="resume.e3.title">Graduate Engineer Trainee — Excel Precast Solutions</h4>
-              <div class="meta" data-i18n="resume.e3.meta">Bangalore • 10/2021–09/2022</div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="card" style="padding:1rem">
-            <h3 data-i18n="resume.education">Education</h3>
-            <ul>
-              <li data-i18n="resume.ed1">B.E. Civil Engineering — Mar Ephraem College of Engineering & Technology (2017–2021)</li>
-              <li data-i18n="resume.ed2">M.Sc. Materials Engineering — RWTH Aachen University (ongoing)</li>
-            </ul>
-
-            <h3 data-i18n="resume.skills">Skills</h3>
-            <div class="chips" aria-label="Skill tags" style="margin-top:.6rem">
-              <span class="chip">AutoCAD</span>
-              <span class="chip">SketchUp</span>
-              <span class="chip">MS Excel</span>
-              <span class="chip">QA/QC</span>
-              <span class="chip">Site Supervision</span>
-              <span class="chip">Marketing & Sales</span>
-            </div>
-
-            <h3 style="margin-top:1rem">Languages</h3>
-            <p class="meta" data-i18n="resume.langs">English (B2/C1), Malayalam (Native), Tamil, Hindi</p>
-
-            <div style="margin-top:1rem; display:flex; gap:.6rem">
-              <a class="btn secondary" href="cv/george-cv-en.pdf" target="_blank" rel="noopener">Download CV (EN)</a>
-              <a class="btn" href="#contact" style="background:transparent; border:1px solid #e6eefc; color:#0f172a">Contact</a>
+            <div class="exp-card">
+              <div class="exp-head"><strong>Graduate Engineer Trainee — Excel Precast</strong> <span class="exp-meta">Bangalore • 10/2021–09/2022</span></div>
+              <ul>
+                <li>Managed erection of precast elements and concrete monitoring.</li>
+                <li>Assisted in QA checks and safe handling.</li>
+              </ul>
             </div>
           </div>
         </div>
+
+        <aside class="resume-right">
+          <div class="card skill-card">
+            <h4>Skills & Tools</h4>
+
+            <div class="skill">
+              <div class="label">AutoCAD <span>85%</span></div>
+              <div class="bar"><div class="fill" style="width:85%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="label">MS Excel (estimation) <span>80%</span></div>
+              <div class="bar"><div class="fill" style="width:80%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="label">Site supervision <span>82%</span></div>
+              <div class="bar"><div class="fill" style="width:82%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="label">QA / QC <span>76%</span></div>
+              <div class="bar"><div class="fill" style="width:76%"></div></div>
+            </div>
+
+            <h5 style="margin-top:.8rem">Software</h5>
+            <div class="chips">
+              <span>SketchUp</span><span>Photoshop</span><span>Illustrator</span><span>MS Office</span>
+            </div>
+
+            <h5 style="margin-top:.8rem">Languages</h5>
+            <div class="meta">English (B2/C1), Malayalam (Native), Tamil, Hindi</div>
+
+            <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap">
+              <a class="btn primary" href="cv/george-cv-en.pdf" target="_blank" rel="noopener">Download CV (EN)</a>
+              <a class="btn ghost" href="#contact">Contact</a>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
-
-      <div class="contact card">
-        <p data-i18n="contact.blurb">Based in Germany — available now for Werkstudent, part-time, and junior roles. I reply within 24 hours.</p>
-
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
-          <a class="pill" href="mailto:georgepmathew424@gmail.com" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3V6Zm9 5L4 7h16l-8 4Z" stroke="currentColor" stroke-width="1.6"/></svg>
-            <span>georgepmathew424@gmail.com</span>
-          </a>
-
-          <a class="pill" href="https://www.linkedin.com/in/georgepmathew/" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8 8h3.8v2.2H12c.5-1 1.7-2.2 3.6-2.2 3.9 0 4.6 2.6 4.6 6V24h-4v-6.6c0-1.6 0-3.6-2.2-3.6s-2.6 1.7-2.6 3.5V24H8V8z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-
-          <a class="pill" href="https://x.com/EngineerGPM" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.1 2H23l-7.2 8.3L24 22h-6.9l-5.4-7-6.2 7H0l7.7-8.7L1 2h7l4.9 6.6L20.1 2z"/></svg>
-            <span>X</span>
-          </a>
+    <section id="contact" class="section">
+      <h2 data-i18n="contact.title">Contact</h2>
+      <div class="card contact-card">
+        <p data-i18n="contact.blurb">Based in Germany — available for Werkstudent, part-time, and junior roles. I reply within 24 hours.</p>
+        <div class="contact-grid">
+          <a class="pill" href="mailto:georgepmathew424@gmail.com">georgepmathew424@gmail.com</a>
+          <a class="pill" href="https://www.linkedin.com/in/georgepmathew/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://x.com/EngineerGPM" target="_blank" rel="noopener">X</a>
+          <a class="pill" href="https://www.facebook.com/engineergpm/" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      © <span id="year"></span> George P Mathew — Available for Werkstudent & junior engineering roles • <a href="https://georgepmathew.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+      <small>© <span id="year"></span> George P Mathew — Available for Werkstudent & junior engineering roles</small>
     </div>
   </footer>
 
-  <!-- Inline JS only (language toggle + mobile menu + small accessibility helpers) -->
+  <!-- Inline JS: language toggle & mobile menu (no external JS file) -->
   <script>
-    // persist year
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Inline i18n dictionary (English + German)
-    const i18n = {
+    // i18n minimal dictionary
+    const dict = {
       en: {
-        'nav.value':'Value','nav.projects':'Projects','nav.resume':'Résumé','nav.contact':'Contact','nav.home':'Home',
-        'hero.title':'Civil Engineer & Materials Engineering student (RWTH Aachen)',
-        'hero.lead':'I bring hands-on site supervision experience and commercial initiative — launched a paint-service that doubled local revenue in 12 months. Available for Werkstudent / part-time roles now and full-time after graduation.',
+        'nav.value':'Value','nav.projects':'Projects','nav.resume':'Résumé','nav.contact':'Contact',
+        'hero.title':'Civil Engineer & Materials Engineering student',
+        'hero.lead':'Hands-on site supervision and commercial initiative — launched a paint-service that doubled local revenue in 12 months.',
         'hero.cta':'See case study','hero.cta2':'Download CV (EN)',
-        'hero.badge1':'On-site Supervision','hero.badge2':'Available in Germany','hero.badge3':'Part-time & Full-time',
         'value.title':'What I bring',
-        'value.v1.title':'On-site engineering','value.v1.copy':'Supervision of pile foundations, precast erection, QA checks, and coordination to deliver milestones on time.',
-        'value.v2.title':'Commercial acumen','value.v2.copy':'Designed & launched a paint-service at Best Trading — market fit, pricing & local launch that doubled yearly revenue.',
-        'value.v3.title':'Academic & lab focus','value.v3.copy':'Materials Engineering student (RWTH Aachen). Strong practical & lab-focused approach to materials performance and durability.',
-        'projects.title':'Featured project — Business Transformation',
+        'value.v1.title':'On-site engineering','value.v1.copy':'Supervision of pile foundations, precast erection and finishing; ensuring quality and timely milestones.',
+        'value.v2.title':'Commercial acumen','value.v2.copy':'Launched a paint service at Best Trading — market fit, pricing & local launch; measurable revenue growth.',
+        'value.v3.title':'Academic & lab focus','value.v3.copy':'M.Sc. Materials Engineering (RWTH Aachen). Focus on materials performance and durability in the lab and field.',
+        'projects.title':'Featured project – Business Transformation',
         'projects.p1.title':'Best Trading — Paint Service (Pathanapuram)',
         'projects.p1.meta':'Role: Concept lead • 2023–2024',
-        'projects.p1.li1':'Challenge: Passive retail model and low customer retention.',
-        'projects.p1.li2':'Action: Market analysis, service design, training, promotions.',
-        'projects.p1.li3':'Result: +100% total revenue in 12 months.',
-        'projects.p2.title':'Site Supervision — SG Construction','projects.p2.meta':'Mumbai • 02/2023–11/2023',
-        'projects.p3.title':'Precast QA/QC — Excel Precast Solutions','projects.p3.meta':'Bangalore • 10/2021–09/2022',
-        'resume.title':'Résumé & skills','resume.education':'Education','resume.skills':'Skills','resume.langs':'English (B2/C1), Malayalam (Native), Tamil, Hindi',
-        'resume.e1.title':'Business Assistant — Best Trading','resume.e1.meta':'Pathanapuram • 12/2023–Present','resume.e1.li1':'Customer guidance, service design & operations.','resume.e1.li2':'Led paint-service launch and growth.',
-        'resume.e2.title':'Junior Engineer — SG Construction Company','resume.e2.meta':'Mumbai • 02/2023–11/2023',
-        'resume.e3.title':'Graduate Engineer Trainee — Excel Precast Solutions','resume.e3.meta':'Bangalore • 10/2021–09/2022',
-        'contact.title':'Contact','contact.blurb':'Based in Germany — available now for Werkstudent, part-time, and junior roles. I reply within 24 hours.'
+        'projects.p2.title':'Site supervision — SG Construction','projects.p2.meta':'Mumbai • 02/2023–11/2023',
+        'projects.p3.title':'Precast QA/QC — Excel Precast','projects.p3.meta':'Bangalore • 10/2021–09/2022',
+        'resume.title':'Résumé & skills','resume.langs':'English (B2/C1), Malayalam (Native), Tamil, Hindi',
+        'contact.title':'Contact','contact.blurb':'Based in Germany — available for Werkstudent, part-time, and junior roles. I reply within 24 hours.'
       },
       de: {
-        'nav.value':'Mehrwert','nav.projects':'Projekte','nav.resume':'Lebenslauf','nav.contact':'Kontakt','nav.home':'Start',
-        'hero.title':'Bauingenieur & Masterstudent Werkstofftechnik (RWTH Aachen)',
-        'hero.lead':'Praxis auf der Baustelle und kaufmännische Initiative — Einführung eines Maler-Service, der den lokalen Umsatz in 12 Monaten verdoppelte. Verfügbar als Werkstudent/Teilzeit jetzt und Vollzeit nach dem Studium.',
+        'nav.value':'Mehrwert','nav.projects':'Projekte','nav.resume':'Lebenslauf','nav.contact':'Kontakt',
+        'hero.title':'Bauingenieur & Masterstudent Werkstofftechnik',
+        'hero.lead':'Praxis auf der Baustelle und kaufmännische Initiative — Einführung eines Maler-Service, der den lokalen Umsatz in 12 Monaten verdoppelte.',
         'hero.cta':'Belege ansehen','hero.cta2':'CV herunterladen (EN)',
         'value.title':'Was ich mitbringe',
-        'value.v1.title':'Praxis auf der Baustelle','value.v1.copy':'Überwachung von Pfahlgründungen, Montage von Fertigteilen, QA-Prüfungen und Koordination zur termingerechten Fertigstellung.',
-        'value.v2.title':'Kaufmännisches Verständnis','value.v2.copy':'Entwurf & Einführung eines Maler-Services bei Best Trading — Marktanalyse, Preisgestaltung & lokale Einführung, Umsatz verdoppelt.',
-        'value.v3.title':'Akademisch & Labor','value.v3.copy':'Masterstudent Werkstofftechnik (RWTH Aachen). Praxis- und labororientierter Ansatz für Material-Performance.',
-        'projects.title':'Ausgewähltes Projekt — Business Transformation',
+        'value.v1.title':'Praxis auf der Baustelle','value.v1.copy':'Überwachung von Pfahlgründungen, Montage von Fertigteilen und Ausbau; Qualität & Termine gesichert.',
+        'value.v2.title':'Kaufmännisches Verständnis','value.v2.copy':'Einführung eines Maler-Services bei Best Trading — Marktanalyse, Preisgestaltung & lokale Einführung; messbares Umsatzwachstum.',
+        'value.v3.title':'Akademisch & Labor','value.v3.copy':'Masterstudent Werkstofftechnik (RWTH Aachen). Fokus auf Material-Performance und Haltbarkeit.',
+        'projects.title':'Ausgewähltes Projekt – Business Transformation',
         'projects.p1.title':'Best Trading — Maler-Service (Pathanapuram)',
         'projects.p1.meta':'Rolle: Konzeptleiter • 2023–2024',
-        'projects.p1.li1':'Herausforderung: Passives Einzelhandelsmodell & geringe Kundenbindung.',
-        'projects.p1.li2':'Vorgehen: Marktanalyse, Leistungsdesign, Schulung, Promotionen.',
-        'projects.p1.li3':'Ergebnis: +100% Umsatz in 12 Monaten.',
         'projects.p2.title':'Bauleitung — SG Construction','projects.p2.meta':'Mumbai • 02/2023–11/2023',
-        'projects.p3.title':'Fertigteil QA/QC — Excel Precast Solutions','projects.p3.meta':'Bangalore • 10/2021–09/2022',
-        'resume.title':'Lebenslauf & Fähigkeiten','resume.education':'Ausbildung','resume.skills':'Fähigkeiten','resume.langs':'Englisch (B2/C1), Malayalam (Muttersprache), Tamil, Hindi',
-        'resume.e1.title':'Business Assistant — Best Trading','resume.e1.meta':'Pathanapuram • 12/2023–Heute','resume.e1.li1':'Kundenberatung, Service-Design & Betrieb.','resume.e1.li2':'Leitung: Einführung & Wachstum des Maler-Services.',
-        'resume.e2.title':'Junior Engineer — SG Construction Company','resume.e2.meta':'Mumbai • 02/2023–11/2023',
-        'resume.e3.title':'Trainee — Excel Precast Solutions','resume.e3.meta':'Bangalore • 10/2021–09/2022',
+        'projects.p3.title':'Fertigteil QA/QC — Excel Precast','projects.p3.meta':'Bangalore • 10/2021–09/2022',
+        'resume.title':'Lebenslauf & Fähigkeiten','resume.langs':'Englisch (B2/C1), Malayalam (Muttersprache), Tamil, Hindi',
         'contact.title':'Kontakt','contact.blurb':'Ansässig in Deutschland — verfügbar für Werkstudenten-, Teilzeit- und Junior-Positionen. Ich antworte innerhalb von 24 Stunden.'
       }
     };
 
     function setLang(lang){
-      const dict = i18n[lang] || i18n.en;
+      const table = dict[lang] || dict.en;
       document.documentElement.lang = (lang === 'de') ? 'de' : 'en';
-      // replace text for elements with data-i18n attributes
-      document.querySelectorAll('[data-i18n]').forEach(el => {
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
         const key = el.getAttribute('data-i18n');
-        if(dict[key]) el.textContent = dict[key];
+        if(table[key]) el.textContent = table[key];
       });
-      // update toggle UI
-      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-      document.getElementById('lang-de').classList.toggle('active', lang === 'de');
-      document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en');
-      document.getElementById('lang-de').setAttribute('aria-pressed', lang === 'de');
+      // toggles (desktop and mobile)
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+        btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+      });
       localStorage.setItem('lang', lang);
     }
-
-    // attach events
-    document.getElementById('lang-en').addEventListener('click', ()=> setLang('en'));
-    document.getElementById('lang-de').addEventListener('click', ()=> setLang('de'));
-    // set initial language from localStorage or browser preference
+    // attach desktop & mobile language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=> setLang(btn.dataset.lang));
+    });
+    // initial language
     const saved = localStorage.getItem('lang');
-    const defaultLang = saved || (navigator.language && navigator.language.startsWith('de') ? 'de' : 'en');
-    setLang(defaultLang);
+    const initial = saved || (navigator.language && navigator.language.startsWith('de') ? 'de' : 'en');
+    setLang(initial);
 
-    // small mobile menu toggle (only shows on small screens)
-    const menuBtn = document.getElementById('menu-btn');
-    let menuOpen = false;
-    function toggleMenu(){
-      menuOpen = !menuOpen;
-      // accessible announcement: change aria-label
-      menuBtn.setAttribute('aria-label', menuOpen ? 'Close menu' : 'Open menu');
-      // simple approach: scroll to top when opened to show nav (keeps no external menu DOM changes)
-      if(menuOpen) window.scrollTo({ top: 0, behavior: 'smooth' });
+    // mobile menu toggle
+    const menuOpenBtn = document.getElementById('menu-open');
+    const menuCloseBtn = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu(){
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden','false');
+      menuOpenBtn.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
     }
-    menuBtn && menuBtn.addEventListener('click', toggleMenu);
+    function closeMenu(){
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden','true');
+      menuOpenBtn.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    }
+    menuOpenBtn && menuOpenBtn.addEventListener('click', openMenu);
+    menuCloseBtn && menuCloseBtn.addEventListener('click', closeMenu);
+    // close mobile menu when clicking any mobile link
+    document.querySelectorAll('#mobile-menu a.mobile-link').forEach(a => a.addEventListener('click', closeMenu));
   </script>
 </body>
 </html>
